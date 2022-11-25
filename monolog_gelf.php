@@ -31,7 +31,7 @@ $transport = new UdpTransport('127.0.0.1', 12201);
 $publisher = new Publisher($transport);
 $gelfHandler = new GelfHandler($publisher);
 
-$log = new Logger('StripoMailer');
+$log = new Logger('name');
 $log->pushHandler($gelfHandler);
 $log->Warning('Warning: ' . $message);
 $log->Error('Error: ' . $message);
